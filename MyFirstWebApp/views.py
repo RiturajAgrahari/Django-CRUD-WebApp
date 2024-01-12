@@ -9,19 +9,19 @@ from .models import Records
 def home(request):
     records = Records.objects.all()
 
-
     # Check to see if logging in
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
         # Authenticate
         user = authenticate(request, username=username, password=password)
+
         if user is not None:
             login(request, user)
-            messages.success(request, "You Have Been Logged In!")
+            messages.success(request, "You Have Been Successfuly Logged In!")
             return redirect('home')
         else:
-            messages.success(request, "Their Was An Error Logging In, Please Try Again...")
+            messages.success(request, "You Filled Wrong Credentials...")
             return redirect('home')
     else:
         return render(request, 'home.html', {'records': records})

@@ -1,12 +1,10 @@
 {% extends 'master.html' %}
 
-{% block content %}
 
-<!--<div class="col-md-6 offset-md-3">-->
+{% block content %}
 
 {% if user.is_authenticated %}
 
-<!--    <h1>Records...</h1>-->
 <br/>
 
 <table class="table table-striped table-hover table-bordered">
@@ -39,7 +37,6 @@
           <td>{{ record.created_at }}</td>
         </tr>
       {% endfor%}
-
     {% endif %}
 
   </tbody>
@@ -47,6 +44,8 @@
 
 
 {% else %}
+
+
 <div class="col-md-6 offset-md-3">
 <h1>Login</h1>
 <br>
@@ -56,18 +55,20 @@
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Username</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-           name="username", placeholder="Username" required>
+           name="username" placeholder="Username" required>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="password", placeholder="Password"
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password"
            required>
   </div>
   <button type="submit" class="btn btn-secondary">Login</button>
 </form>
 
-<!--</div>-->
+</div>
+
 
 {% endif %}
+
 
 {% endblock %}
