@@ -27,7 +27,7 @@ In your web browser enter the address: http://localhost:8000 or http://127.0.0.1
 
 
 ## Note:
-In your project you have to make sure about this things:
+In your project you have to make sure about these things:
 
 ### settings.py:
 ```
