@@ -4,3 +4,5 @@ Scripts/
 db.sqlite3
 pyvenv.cfg
 __pycache__/
+FirstProject/
+manage.py
